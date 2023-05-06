@@ -1,0 +1,17 @@
+.headerWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid red;
+}
+
+.logoWrapper {
+    width: 50%;
+}
+
+.controlPanelWrapper {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

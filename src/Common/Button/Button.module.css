@@ -1,0 +1,22 @@
+.btn {
+    border: 2px solid purple;
+    background-color: white;
+    font-size: 1vw;
+    width: 10vw;
+    padding: 0.5vw 0;
+    cursor: pointer;
+    display: block;
+}
+
+.iconBtn {
+    border: 2px solid purple;
+    background-color: white;
+    height: 100%;
+    position: relative;
+    width: 3vw;
+    cursor: pointer;
+}
+
+.iconBtn svg {
+    height: 1.5vw;
+}

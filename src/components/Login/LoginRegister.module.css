@@ -1,0 +1,35 @@
+.sectionWrapper {
+    display: flex;
+    justify-content: center;
+    border: 2px solid cornflowerblue;
+    margin-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.innerWrapper {
+    margin-top: 2vw;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.innerWrapper h2 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+.form a {
+    text-decoration: none;
+    font-weight: 700;
+    color: cornflowerblue;
+}
+
+.form label {
+    width: 100%;
+}

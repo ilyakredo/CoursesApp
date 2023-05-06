@@ -1,0 +1,57 @@
+.courseCardWrapper {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid green;
+    margin-top: 2vw;
+}
+
+.leftColumnWrapper {
+    width: 70%;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rightColumnWrapper {
+    width: 30%;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1vw;
+
+}
+
+.descLabel {
+    font-weight: 700;
+}
+
+.buttonsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.buttonWrapper {
+    height: 100%;
+}
+
+.buttonsWrapper button {
+    height: 100%;
+}
+
+.courseAuthor {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    display: block;
+}

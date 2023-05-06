@@ -1,0 +1,98 @@
+.coursesWrapper {
+    border: 2px solid blue;
+    padding: 1vw;
+    margin-top: 1vw;
+}
+
+.titleWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputWrapper {
+    width: 40%;
+}
+
+.buttonWrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 20%;
+}
+
+.descriptionWrapper {
+    width: 100%;
+    padding-top: 1vw;
+}
+
+
+.description {
+    box-sizing: border-box;
+    width: 100%;
+    height: 6vw;
+    border: 2px solid yellow;
+    padding: 0.5vw;
+    font-size: 1vw;
+}
+
+.courseInfoWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.leftCol {
+    width: 45%;
+    box-sizing: border-box;
+}
+
+h3 {
+    text-align: center;
+}
+
+.rightCol {
+    width: 45%;
+}
+
+.authorInputWrapper {
+    box-sizing: border-box;
+}
+
+.authorButtonWrapper {
+    padding: 1vw 0 2vw 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.authorButtonWrapper p {
+    width: 100%;
+    font-size: 2vw;
+    text-align: left;
+}
+
+.authorsListWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    padding-top: 1vw;
+}
+
+.authorItem {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1vw;
+}
+
+.courseAuthors {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}

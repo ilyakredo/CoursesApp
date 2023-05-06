@@ -1,0 +1,16 @@
+.searchWrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputWrapper {
+    width: 65%;
+    padding-right: 1vw;
+}
+
+.buttonWrapper {
+    width: 30%;
+}

@@ -1,0 +1,12 @@
+inputLabel {
+    width: 100%;
+}
+
+.input {
+    border: 2px solid orange;
+    padding-left: 1vw;
+    width: 100%;
+    height: 2.5vw;
+    font-size: 1vw;
+    box-sizing: border-box;
+}

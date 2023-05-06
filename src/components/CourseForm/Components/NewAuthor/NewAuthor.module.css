@@ -1,0 +1,16 @@
+.authorInputWrapper {
+    box-sizing: border-box;
+}
+
+.authorButtonWrapper {
+    padding: 1vw 0 2vw 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.authorButtonWrapper p {
+    width: 100%;
+    font-size: 2vw;
+    text-align: left;
+}

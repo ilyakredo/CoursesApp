@@ -1,0 +1,26 @@
+.coursesWrapper {
+    border: 2px solid blue;
+    padding: 1vw;
+    margin-top: 1vw;
+}
+
+.handleWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.searchWrapper {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1vw;
+}
+
+.addCourseWrapper {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
