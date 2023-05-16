@@ -2,87 +2,26 @@ import { screen, render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { Courses } from '../Courses';
+import { mockedStore } from './mockedData';
 
-const mockedState = {
-	userReducer: {
-		user: {
-			isAuth: true,
-			name: 'Test Name',
-			email: '',
-			token: '',
-			role: '',
-		},
-	},
-	authorsReducer: {
-		authors: [
-			{
-				name: 'author',
-				id: '9b87e8b8-6ba5-40fc-a439-c4e30a373d36',
-			},
-			{
-				name: 'author2',
-				id: '1c972c52-3198-4098-b6f7-799b45903199',
-			},
-			{
-				name: 'author3',
-				id: '072fe3fc-e751-4745-9af5-aa9eed0ea9ed',
-			},
-		],
-	},
-	coursesReducer: {
-		courses: [
-			{
-				title: 'first course name',
-				description: 'description for the first course',
-				creationDate: '9/3/2021',
-				duration: 30,
-				authors: [
-					'1c972c52-3198-4098-b6f7-799b45903199',
-					'072fe3fc-e751-4745-9af5-aa9eed0ea9ed',
-				],
-				id: 'firstCourseId',
-			},
-			{
-				title: 'second course name',
-				description: 'description for the second course',
-				creationDate: '9/3/2022',
-				duration: 50,
-				authors: [
-					'9b87e8b8-6ba5-40fc-a439-c4e30a373d36',
-					'072fe3fc-e751-4745-9af5-aa9eed0ea9ed',
-				],
-				id: 'secondCourseId',
-			},
-		],
-	},
-};
+const createMarkup = (props) => (
+	<Provider store={mockedStore}>
+		<BrowserRouter>
+			<Courses {...props} />
+		</BrowserRouter>
+	</Provider>
+);
 
-const mockedStore = {
-	getState: () => mockedState,
-	subscribe: jest.fn(),
-	dispatch: jest.fn(),
-};
+const createTree = (props) => render(createMarkup(props));
 
-test('Checking if Courses component is rendered', () => {
-	render(
-		<Provider store={mockedStore}>
-			<BrowserRouter>
-				<Courses />
-			</BrowserRouter>
-		</Provider>
-	);
+test('Should check if Courses component is rendered', () => {
+	createTree();
 	const searchInput = screen.getByPlaceholderText('Enter course name...');
 	expect(searchInput).toBeInTheDocument();
 });
 
-test('Checking if both courses titles are rendered', () => {
-	render(
-		<Provider store={mockedStore}>
-			<BrowserRouter>
-				<Courses />
-			</BrowserRouter>
-		</Provider>
-	);
+test('Should check if both courses titles are rendered', () => {
+	createTree();
 	const coursesTitles = screen.getAllByText(/course name/i);
 	expect(coursesTitles).toHaveLength(2);
 });
@@ -91,7 +30,7 @@ beforeEach(() => {
 	fetch.resetMocks();
 });
 
-test('Checking if fetched courses displayed', async () => {
+test('Should check if fetched courses displayed', async () => {
 	fetch.mockResponseOnce(
 		JSON.stringify({
 			successful: true,
@@ -147,14 +86,7 @@ test('Checking if fetched courses displayed', async () => {
 	};
 
 	mockedStore.getState().coursesReducer.courses = await fetchCourses();
-
-	render(
-		<Provider store={mockedStore}>
-			<BrowserRouter>
-				<Courses />
-			</BrowserRouter>
-		</Provider>
-	);
+	createTree();
 	const fetchedCourseDesc = await screen.findByText(/TEST desc/i);
 	expect(fetchedCourseDesc).toBeInTheDocument();
 });

@@ -75,7 +75,7 @@ export const App = () => {
 					element={<PrivateRoute children={<CourseForm />} />}
 				/>
 				<Route
-					path='/courses/update/:courseId'
+					path='courses/update/:courseId'
 					element={<PrivateRoute children={<CourseForm />} />}
 				/>
 				{createCoursesRoutes()}
